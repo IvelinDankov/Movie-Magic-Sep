@@ -1,19 +1,13 @@
 import express from "express";
-import handlebars from "express-handlebars";
+import hbsConfig from "./config/hbsConfig.js";
+import expressCfg from "./config/expressConfig.js";
 
 const app = express();
+const port = 5000;
 
-app.engine('hbs', handlebars.engine({
-    extname: 'hbs'
-}));
+hbsConfig(app);
+expressCfg(app);
 
-app.set('view engine', 'hbs');
-app.set('views', 'src/views');
-
-app.use(express.static('public'));
-
-app.get('/', (req, res) => {
-   res.render('home');
-});
-
-app.listen(5000, () => console.log(`Server is listening on local host 5000 ... `))
+app.listen(port, () =>
+  console.log(`Server is listening on local host ${port} ... `)
+);
