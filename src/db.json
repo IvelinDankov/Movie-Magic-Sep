@@ -20,6 +20,16 @@
       "title": "Home Alone",
       "genre": "Comedy",
       "description": "It is Christmas time and the McCallister family is preparing for a vacation in Paris, France. But the youngest in the family, Kevin (Macaulay Culkin), got into a scuffle with his older brother Buzz (Devin Ratray) and was sent to his room, which is on the third floor of his house. Then, the next morning, while the rest of the family was in a rush to make it to the airport on time, they completely forgot about Kevin, who now has the house all to himself. Being home alone was fun for Kevin, having a pizza all to himself, jumping on his parents' bed, and making a mess. Then, Kevin discovers about two burglars, Harry (Joe Pesci) and Marv (Daniel Stern), about to rob his house on Christmas Eve. Kevin acts quickly by wiring his own house with makeshift booby traps to stop the burglars and to bring them to justice."
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "genre": "Drama",
+      "director": "Frank Darabont",
+      "year": "1994",
+      "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Firs.www.warnerbros.com%2Fgallery-v2-mobile-jpeg%2Fthe_shawshank_redemption_posterlarge_0-675188670.jpg&f=1&nofb=1&ipt=f81377170e73e692e5f1524c1c1a0bdf40658d37f699e1593958645f1fe15272&ipo=images",
+      "rating": "10",
+      "description": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+      "id": "2hv8s144m1kkpyuv"
     }
   ]
 }
