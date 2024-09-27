@@ -1,10 +1,10 @@
 import express from "express";
-import homeController from "../controllers/homeController.js";
+import routes from "../routes.js";
 
 function expressCfg(app) {
   app.use(express.static("public"));
 
-  app.use(homeController)
+  app.use(routes);
 }
 
 export default expressCfg;
