@@ -1,2 +1,2 @@
 # Movie-Magic-Sep
-JS Back-End Workshop @Softuni
+JS Back-End Workshop @SoftUni
