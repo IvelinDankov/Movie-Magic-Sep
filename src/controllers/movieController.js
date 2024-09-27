@@ -16,19 +16,26 @@ router.post("/create", async (req, res) => {
   res.redirect("/");
 });
 
-router.get('/:movieId/details', async(req, res) => {
-    const movie = await movieService.getOne(req.params.movieId);
-    // Prepere view data
-    movie.rating = getRatingViewData(movie.rating);
+router.get("/search", async (req, res) => {
+  const filter = req.query;
+  const movies = await movieService.getAll(filter);
 
-   res.render('movies/details', {movie});
+  res.render("home", { isSearch: true, movies });
+});
+
+router.get("/:movieId/details", async (req, res) => {
+  const movie = await movieService.getOne(req.params.movieId);
+  // Prepere view data
+  movie.rating = getRatingViewData(movie.rating);
+
+  res.render("movies/details", { movie });
 });
 
 function getRatingViewData(rating) {
-    if (!Number(rating)) {
-        return
-    }
-    return  "&#x2605;".repeat(rating);
+  if (!Number(rating)) {
+    return;
+  }
+  return "&#x2605;".repeat(rating);
 }
 
 export default router;
