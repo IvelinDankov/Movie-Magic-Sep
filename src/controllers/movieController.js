@@ -3,15 +3,17 @@ import movieService from "../services/movieService.js";
 
 const router = Router();
 
+
+
 router.get("/create", (req, res) => {
   res.render("movies/create");
 });
 
-router.post("/create", async (req, res) => {
+router.post("/create",  (req, res) => {
   const movieData = req.body;
 
   //TODO: send moviedata...
-  await movieService.create(movieData);
+   movieService.create(movieData);
 
   res.redirect("/");
 });
@@ -23,9 +25,10 @@ router.get("/search", async (req, res) => {
   res.render("home", { isSearch: true, movies, filter});
 });
 
+
 router.get("/:movieId/details", async (req, res) => {
-  const movie = await movieService.getOne(req.params.movieId);
-  // Prepere view data
+  const movie = await movieService.getOne(req.params.movieId).lean();
+  // Prepare view data
   movie.rating = getRatingViewData(movie.rating);
 
   res.render("movies/details", { movie });
